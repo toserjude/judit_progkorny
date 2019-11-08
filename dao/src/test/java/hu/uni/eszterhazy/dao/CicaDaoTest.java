@@ -7,12 +7,13 @@ import org.junit.Test;
 
 import java.io.IOException;
 
-class CicaDaoTest {
+public class CicaDaoTest {
     @Test
     public void testDB() throws IOException, NemJoNev {
         CicaDao dao = new CicaDao("cica.json");
         Cica c = new Cica();
         c.setNev("Macska");
-        dao.addCica(c);
+        //dao.addCica(c);
+        System.out.println(dao.readAllCica());
     }
 }
